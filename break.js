@@ -1,8 +1,11 @@
 var canvas = document.getElementById("breakCanvas");
 var ctx = canvas.getContext("2d");
 
-ctx.beginPath();
-ctx.rect(20, 40, 50, 50);
-ctx.fillStyle = "#FF0000";
-ctx.fill();
-ctx.closePath();
+
+function draw() {
+  ctx.arc(50, 50, 10, 0, Math.PI*2);
+  ctx.fillStyle = "#0095DD";
+  ctx.fill();
+  ctx.closePath();
+}
+setInterval(draw, 10);
